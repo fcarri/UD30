@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    
+    <script>
+        p = "més petit";
+        g = "més gran"
+        var valores = [true, 5, false, "hola", "adios", 2];
+        let v = (valores[3] < valores[4]) ? p:g;         
+        document.getElementById("demo").innerHTML = valores[3]+" "+v + "<br>" +
+        (document.getElementById("demo").innerHTML = !(valores[0])) + "<br>" +
+        (document.getElementById("demo").innerHTML = !(valores[2])) + "<br>" +
+        "suma "+(document.getElementById("demo").innerHTML = valores[1]+ valores[5]) +"<br>" +
+        "resta "+(document.getElementById("demo").innerHTML = valores[1]- valores[5]) +"<br>" +
+        "multiplicació "+(document.getElementById("demo").innerHTML = valores[1]* valores[5]) +"<br>" +
+        "divisió "+(document.getElementById("demo").innerHTML = valores[1]/ valores[5]) +"<br>" +
+        "mòdul "+(document.getElementById("demo").innerHTML = valores[1]% valores[5]);
+    </script>
+</body>
+</html>

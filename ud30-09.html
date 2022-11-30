@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let cadena = "JAVA"
+        let longitud = cadena.length;
+        let maj = 0;
+        let min = 0;
+        let comb = -1;
+        let nomesMaj = -1;
+        let nomesMin = -1;
+        
+        function start(cadena){    
+            
+            for(var i=0;i<longitud;i++){     
+
+                if(cadena.charAt(i) === cadena.charAt(i).toUpperCase()){
+                    maj = 1;   
+                    console.log("maj");                                   
+                }
+                if(cadena.charAt(i) === cadena.charAt(i).toLowerCase()){
+                    min = 1;   
+                    console.log("min");                                    
+                }
+                if(maj == 1 && min == 1){
+                    comb = 1;
+                    console.log("Comb");
+                } 
+                if(maj == 0 && min == 1){
+                    nomesMin = 1;                    
+                }
+                if(maj == 1 && min == 0){
+                    nomesMaj = 1;                    
+                }
+                
+            }                               
+         return comb
+        }
+
+        start(cadena)
+        
+        if (comb == 1){
+            document.getElementById("demo").innerHTML= "Combinación"; 
+        }else if(nomesMin == 1){
+            document.getElementById("demo").innerHTML= "Sólo minusculas"; 
+        }else if(nomesMaj == 1){
+            document.getElementById("demo").innerHTML= "Sólo mayusculas"; 
+        }
+
+    </script>    
+</body>
+</html>

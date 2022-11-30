@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindrom(str) {
+            const newStr = str.replace(/[\W_]/g, "").toLowerCase();
+            const strReversed = newStr.split("").reverse().join("");
+
+            return newStr === strReversed ? "es un palindromo" : "no es un palindromo";
+        }
+
+        console.log(palindrom("la ruta nos aporta otro paso natural"));        
+       
+    </script>
+</body>
+</html>

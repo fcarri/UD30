@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+   <script>
+    
+    let DNI = 39712990;
+    let letra_DNI;
+    let letra = "A";
+    let n = 99999999;
+    let letras = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','j',
+    'Z','S','Q','V','H','L','C','K','E','T'];
+    
+    if (DNI > n || DNI < 0){
+        document.getElementById("demo").innerHTML= "El número no es válido";
+    }else{
+        letra_DNI = DNI % 23;
+        document.getElementById("demo").innerHTML= letra_DNI;
+        letra_DNI = letras[letra_DNI];
+        
+        if (letra_DNI == letra){
+            document.getElementById("demo").innerHTML= "La letra es correcta";
+        }else{
+            document.getElementById("demo").innerHTML= "La letra no es correcta";
+        }
+    }
+
+   
+                   
+   </script> 
+</body>
+</html>
